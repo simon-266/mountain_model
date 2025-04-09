@@ -70,8 +70,8 @@ def clean_data(df: pd.DataFrame, target_columns: list, sample_data: pd.DataFrame
         return pd.DataFrame()
 
 def main():
-    df = pd.read_csv("Mountain.csv")
-    df_sample = pd.read_csv("unfilled.csv")
+    df = pd.read_csv("data/Mountain.csv")
+    df_sample = pd.read_csv("data/unfilled.csv")
     df_sample = df_sample.dropna()
     df = clean_data(df, target_columns=["name", "height", "mountainRange"], sample_data=df_sample)
     df.head()
